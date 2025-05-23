@@ -1,9 +1,0 @@
-C:\source\DataResult\DataResult\bin\Debug\net5.0\DataResult.deps.json
-C:\source\DataResult\DataResult\bin\Debug\net5.0\DataResult.dll
-C:\source\DataResult\DataResult\bin\Debug\net5.0\DataResult.pdb
-C:\source\DataResult\DataResult\obj\Debug\net5.0\DataResult.csprojAssemblyReference.cache
-C:\source\DataResult\DataResult\obj\Debug\net5.0\DataResult.AssemblyInfoInputs.cache
-C:\source\DataResult\DataResult\obj\Debug\net5.0\DataResult.AssemblyInfo.cs
-C:\source\DataResult\DataResult\obj\Debug\net5.0\DataResult.csproj.CoreCompileInputs.cache
-C:\source\DataResult\DataResult\obj\Debug\net5.0\DataResult.dll
-C:\source\DataResult\DataResult\obj\Debug\net5.0\DataResult.pdb
