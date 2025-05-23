@@ -1,12 +1,12 @@
 namespace DataResult;
 
 /// <summary>
-///     Class to be used as error in DataResult.
+///     Class that represents an error in <see cref="DataResult">.
 /// </summary>
 public class DataError
 {
     /// <summary>
-    ///     Gets or sets the code to identify the kind of error.
+    ///     Gets or sets the code to identify the error.
     /// </summary>
     public string Code { get; set; }
 
