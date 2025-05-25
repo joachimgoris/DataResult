@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace DataResult.Tests;
 
 public class DataResultTTests
@@ -14,5 +16,6 @@ public class DataResultTTests
         // Assert
         Assert.That(dataResult, Is.Not.Null);
         Assert.That(dataResult.Entity, Is.InstanceOf<string>());
+        Assert.That(dataResult.Entity, Is.EqualTo(containedObject));
     }
 }
