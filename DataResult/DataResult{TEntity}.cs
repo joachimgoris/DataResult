@@ -3,7 +3,7 @@ namespace DataResult;
 using System.Collections.Generic;
 
 /// <summary>
-///     An object that is used as a return type. Errors and entities can be added to the object, thus giving a richer response.
+///     An object that is used as a return type. Errors can be added to the instance with <see cref="DataError"/>. Entities can also be added to the object, thus giving a richer response.
 /// </summary>
 /// <typeparam name="TEntity">
 ///     The type of entity to return in the <see cref="DataResult{TEntity}"/>.
