@@ -1,15 +1,15 @@
-﻿namespace DataResult;
+﻿ namespace DataResult;
 
 using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
-///     An object that is used as a return type. Errors can be added to the object with <see cref="DataError"/>. <see cref="DataResult{TEntity}"/> extends on this to also return entities.
+///     An object that is used as a return type. Errors can be added to the instance with <see cref="DataError"/>. <see cref="DataResult{TEntity}"/> extends on this to also return entities.
 /// </summary>
 public class DataResult
 {
     /// <summary>
-    ///     Constructs a new <see cref="DataResult"/> which is successful.
+    ///     Constructs a new <see cref="DataResult"/> instance which has a success result.
     /// </summary>
     public static readonly DataResult Success = new()
     {
@@ -17,7 +17,7 @@ public class DataResult
     };
 
     /// <summary>
-    ///     The property containing the <see cref="DataError"/>
+    ///     The property containing the <see cref="ICollecion{DataError}"/>'.
     /// </summary>
     internal ICollection<DataError> Errors = [];
 
@@ -30,13 +30,13 @@ public class DataResult
     ///     Constructs a new <see cref="DataResult"/> with a <see cref="DataError"/>.
     /// </summary>
     /// <param name="code">
-    ///     The <see cref="DataError.Code"> of the <see cref="DataError"/> object.
+    ///     The <see cref="DataError.Code"> of the <see cref="DataError"/> instance.
     /// </param>
     /// <param name="description">
-    ///     The <see cref="DataError.Description"/> of the <see cref="DataError"/> object.
+    ///     The <see cref="DataError.Description"/> of the <see cref="DataError"/> instance.
     /// </param>
     /// <returns>
-    ///     A new <see cref="DataResult"/> object containing the <see cref="DataError"/>.
+    ///     A new <see cref="DataResult"/> instance containing the <see cref="DataError"/>.
     /// </returns>
     public static DataResult WithError(string code, string description)
     {
@@ -57,10 +57,10 @@ public class DataResult
     ///     Constructs a new <see cref="DataResult"/> containing the <see cref="DataError"/> passed as a parameter.
     /// </summary>
     /// <param name="error">
-    ///     The <see cref="DataError"/> object to add to the <see cref="DataResult"/> object.
+    ///     The <see cref="DataError"/> instance to add to the <see cref="DataResult"/> instance.
     /// </param>
     /// <returns>
-    ///     A new <see cref="DataResult"/> object containing the <see cref="DataError"/>.
+    ///     A new <see cref="DataResult"/> instance containing the <see cref="DataError"/>.
     /// </returns>
     public static DataResult WithError(DataError error)
     {
@@ -75,13 +75,13 @@ public class DataResult
     }
 
     /// <summary>
-    ///     Constructs a new <see cref="DataResult"/> containing a collection of <see cref="DataError"/>'s.
+    ///     Constructs a new <see cref="DataResult"/> instance containing a collection of <see cref="DataError"/>'s.
     /// </summary>
     /// <param name="errors">
-    ///     The collection of <see cref="DataError"/> to add to the newly constructed <see cref="DataResult"/> object.
+    ///     The collection of <see cref="DataError"/>'s to add to the newly constructed <see cref="DataResult"/> instance.
     /// </param>
     /// <returns>
-    ///     A new <see cref="DataResult"/> object containing the collection of <see cref="DataError"/> in its <see cref="DataResult.Errors"(/>.
+    ///     A new <see cref="DataResult"/> instance containing the collection of <see cref="DataError"/> in its <see cref="DataResult.Errors"(/>.
     /// </returns>
     public static DataResult WithError(ICollection<DataError> errors)
     {
@@ -96,10 +96,10 @@ public class DataResult
     ///     Adds a new <see cref="DataError"/> to the existing <see cref="DataResult"/>.
     /// </summary>
     /// <param name="code">
-    ///     The <see cref="DataError.Code"/> for the <see cref="DataError"/> object.
+    ///     The <see cref="DataError.Code"/> for the <see cref="DataError"/> instance.
     /// </param>
     /// <param name="description">
-    ///     The <see cref="DataError.Description"/> for the <see cref="DataError"/> object.
+    ///     The <see cref="DataError.Description"/> for the <see cref="DataError"/> instance.
     /// </param>
     public void AddError(string code, string description)
     {
@@ -113,10 +113,10 @@ public class DataResult
     }
 
     /// <summary>
-    ///     Returns the collection of <see cref="DataError"/>'s in  a <see cref="DataResult"/> object.
+    ///     Returns the collection of <see cref="DataError"/>'s in  a <see cref="DataResult"/> instance.
     /// </summary>
     /// <returns>
-    ///     The <see cref="ICollection{DataError}"/> inside the <see cref="DataResult"/> object.
+    ///     The <see cref="ICollection{DataError}"/> inside the <see cref="DataResult"/> instance.
     /// </returns>
     public ICollection<DataError> GetErrors()
     {
@@ -124,13 +124,13 @@ public class DataResult
     }
 
     /// <summary>
-    ///     Checks if a <see cref="DataResult"/> object contains a <see cref="DataError"/> with the given <see cref="DataError.Code"/>.
+    ///     Checks if a <see cref="DataResult"/> instance contains a <see cref="DataError"/> with the given <see cref="DataError.Code"/>.
     /// </summary>
     /// <param name="code">
     ///     The <see cref="DataError.Code"/> on which to check the <see cref="DataError"/>.
     /// </param>
     /// <returns>
-    ///     <c>true</c> if there is a <see cref="DataError"/> object with the given <see cref="DataError.Code"/> in the <see cref="DataResult"/>.
+    ///     <c>true</c> if there is a <see cref="DataError"/> instance with the given <see cref="DataError.Code"/> in the <see cref="DataResult"/>.
     /// </returns>
     public bool HasError(string code)
     {
